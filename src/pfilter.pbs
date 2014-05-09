@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -l nodes=4:ppn=2
+#PBS -l walltime=00:0:60
+#PBS -o pfilter.out
+#PBS -A lc_jnc
+#PBS -j oe
+#PBS -N pfilter
+
+WORK_HOME=/home/rcf-40/raravi/homework3/src
+
+cd $WORK_HOME
+np=$(cat $PBS_NODEFILE | wc -l)
+source /usr/usc/openmpi/default/setup.sh
+mpirun -np $np -machinefile $PBS_NODEFILE ./pfilter input/moon_in.tiff output.tiff mean 3

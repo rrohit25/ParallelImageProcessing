@@ -1,0 +1,77 @@
+----------------------------------------
+Begin PBS Prologue Thu Apr  3 00:14:54 PDT 2014
+Job ID:            7760197.hpc-pbs.hpcc.usc.edu
+Username:          raravi
+Group:             csci-ar
+Name:              pfilter
+Queue:             quick
+Shared Access:     no
+All Cores:         no
+Nodes:             hpc1736 hpc1873 hpc1874 hpc1875 
+PVFS:              /scratch (247G), /staging (328T)
+TMPDIR:            /tmp/7760197.hpc-pbs.hpcc.usc.edu
+End PBS Prologue Thu Apr  3 00:15:03 PDT 2014
+----------------------------------------
+* doing parallel image filtering ** 
+* reading regular tiff: input/moon_in.tiff
+[hpc1736] processing with filter: mean
+00:15:05 hpc1736 : received image size 173 2953
+00:15:05 hpc1736 : processing meanfilter windowsize 3
+[hpc1873] processing with filter: mean
+00:15:05 hpc1873 : received image size 173 2953
+00:15:05 hpc1873 : processing meanfilter windowsize 3
+[hpc1873] processing with filter: mean
+00:15:05 hpc1873 : received image size 173 2953
+00:15:05 hpc1873 : processing meanfilter windowsize 3
+[hpc1874] processing with filter: mean
+00:15:05 hpc1874 : received image size 173 2953
+00:15:05 hpc1874 : processing meanfilter windowsize 3
+[hpc1874] processing with filter: mean
+00:15:05 hpc1874 : received image size 173 2953
+00:15:05 hpc1874 : processing meanfilter windowsize 3
+[hpc1875] processing with filter: mean
+00:15:05 hpc1875 : received image size 173 2953
+00:15:05 hpc1875 : processing meanfilter windowsize 3
+[hpc1736] processing with filter: mean
+00:15:05 hpc1736 : received image size 172 2953
+00:15:05 hpc1736 : processing meanfilter windowsize 3
+[hpc1875] processing with filter: mean
+00:15:05 hpc1875 : received image size 175 2953
+00:15:05 hpc1875 : processing meanfilter windowsize 3
+00:15:06 hpc1873 send image to manager 
+00:15:06 hpc1873 send image to manager 
+00:15:05 hpc1874 send image to manager 
+00:15:05 hpc1874 send image to manager 
+00:15:05 hpc1736 send image to manager 
+00:15:06 hpc1875 send image to manager 
+00:15:06 hpc1875 send image to manager 
+00:15:06 hpc1736 send image to manager 
+-- done --
+-- done --
+-- done --
+-- done --
+-- done --
+-- done --
+-- done --
+[hpc1736] saving image: p_output.tiff
+-- done --
+* doing serial image filtering ** 
+* reading regular tiff: input/moon_in.tiff
+* processing with filter: mean
+* saving image: s_output.tiff
+-- done --
+s_output.tiff is the same as p_output.tiff
+----------------------------------------
+Begin PBS Epilogue Thu Apr  3 00:15:09 PDT 2014
+Job ID:           7760197.hpc-pbs.hpcc.usc.edu
+Username:         raravi
+Group:            csci-ar
+Job Name:         pfilter
+Session:          2061
+Limits:           neednodes=4:ppn=2,nodes=4:ppn=2,walltime=00:01:00
+Resources:        cput=00:00:07,mem=932kb,vmem=93652kb,walltime=00:00:06
+Queue:            quick
+Shared Access:    no
+Account:          lc_jnc
+End PBS Epilogue Thu Apr  3 00:15:15 PDT 2014
+----------------------------------------
